@@ -1,6 +1,6 @@
 ---
 #title: "Ciclos de FP oficiales en grupos reducidos y servicios educativos"
-title: "Escuela de Arte Flamenco"
+title: "La esencia del flamenco en cada paso"
 layout: splash
 header:
   overlay_image: /assets/images/page-header-teaser.png
@@ -9,7 +9,7 @@ header:
     - label: "Solicita información"
       url: "https://japonformacion.netlify.app/contacto/"
 #excerpt: "Clases presenciales y en horario de mañana"
-excerpt: "Dedicados al desarrollo de servicios educativos, ocio y tiempo libre"
+excerpt: "Aprende y siente el flamenco con clases auténticas y espectáculos inolvidables"
 ---
 
 
