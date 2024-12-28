@@ -3,7 +3,7 @@
 title: "Escuela de Arte Flamenco"
 layout: splash
 header:
-  overlay_image: /assets/images/page-header-teaser.jpg
+  overlay_image: /assets/images/page-header-teaser.png
   #overlay_filter: rgba(102,153,255,0.5)
   actions:
     - label: "Solicita información"
