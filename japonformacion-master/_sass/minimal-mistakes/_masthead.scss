@@ -1,0 +1,102 @@
+.masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent !important; /* Make the masthead transparent */
+  border-bottom: 0;
+  -webkit-animation: $intro-transition;
+  animation: $intro-transition;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+  border-bottom: 0.2px solid #fff;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+
+  &.scrolled {
+    background-color: #e31c24 !important; /* Change background to red on scroll */
+    border-bottom: 0.2px solid transparent; /* Optional: change border color on scroll */
+  }
+
+  &__inner-wrap {
+    @include clearfix;
+    background-color: transparent !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.2em .6em;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-family: $global-font-family;
+
+    @include breakpoint($x-large) {
+      max-width: $max-width;
+    }
+
+    nav {
+      z-index: 10;
+      background-color: transparent;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.site-logo img {
+  max-height: 2.7rem;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.site-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-weight: bold;
+  background-color: transparent !important; /* Ensure site title background is transparent */
+}
+
+.masthead__menu {
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  clear: both;
+  background-color: transparent !important; /* Make the menu background transparent */
+
+  .site-nav {
+    margin-left: 0;
+
+    @include breakpoint($small) {
+      float: right;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    list-style-type: none;
+  }
+}
+
+.masthead__menu-item {
+  font-size: 16px; /* Set your desired font size here */
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
+  background-color: transparent !important; /* Make menu items background transparent */
+
+  &--lg {
+    padding-right: 2em;
+    font-weight: 700;
+  }
+}

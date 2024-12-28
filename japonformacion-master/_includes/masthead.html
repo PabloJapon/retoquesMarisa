@@ -1,0 +1,381 @@
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+
+<div class="masthead">
+    <!-- Small navbar -->
+    <div class="small-navbar">
+        {% include small-navbar.html %}
+    </div>
+    
+    <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                {% unless logo_path == empty %}
+                    <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+                {% endunless %}
+                <ul class="visible-links">
+                    {%- for link in site.data.navigation.main -%}
+                        <li class="masthead__menu-item {% if link.submenu %}dropdown{% endif %}">
+                            <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                            {% if link.submenu %}
+                                <ul class="dropdown-menu">
+                                    {%- for sublink in link.submenu -%}
+                                        <li><a href="{{ sublink.url | relative_url }}">{{ sublink.title }}</a></li>
+                                    {%- endfor -%}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {%- endfor -%}
+                </ul>
+
+                <!-- Botón Servicios -->
+                <div class="servicios-menu">
+                    <button class="btn btn--secondary" id="servicios-button" onclick="toggleserviciosMenu()" style="color: rgb(255, 255, 255);background-color: transparent;outline: none;">
+                        <div class="servicios-button-content" style="display: flex;align-items: center;flex-direction: row;">
+                            <div style="display: flex;flex-direction: column;align-items: flex-start;">
+                                <span id="servicios-username-button" style="font-size: 16px;font-weight: bold;">CICLOS FP</span>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="servicios-menu-dropdown" class="servicios-dropdown" style="display: none; width: 12em;">
+                        <a href="/FPSuperior/">FP SUPERIOR</a>
+                        <a href="/FPMedio/">FP MEDIO</a>
+                    </div>
+                </div>
+    
+                <!-- Botón Solicita Información -->
+                <button class="btn btn--secondary" onclick="window.location.href='/contacto/'" style="margin-left: 1em;background-color: #212121;">Solicita Información</button>
+                
+                {% if site.search == true %}
+                <button class="btn btn--primary search__toggle" type="button" style="background-color: transparent;">
+                    <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+                    <i class="fas fa-search"></i>
+                </button>
+                {% endif %}
+                <a href="https://grupojapon.moodlecloud.com/login/index.php" class="aula-virtual-mobile"><i class="fas fa-user" aria-hidden="true" style="color: white;"></i></a>
+                <a href="https://app.grupojapon.es/" class="aula-virtual-mobile" style="margin-left: 0.5em !important;"><i class="fas fa-users" aria-hidden="true" style="color: white;"></i></a>
+                <button class="btn btn--primary greedy-nav__toggle hidden" type="button">
+                    <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+                    <div class="navicon"></div>
+                </button>
+                <ul class="hidden-links hidden">
+                    {%- for link in site.data.navigation.main -%}
+                        <li class="masthead__menu-item {% if link.submenu %}dropdown{% endif %}">
+                            <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                            {% if link.submenu %}
+                                <ul class="dropdown-menu">
+                                    {%- for sublink in link.submenu -%}
+                                        <li><a href="{{ sublink.url | relative_url }}">{{ sublink.title }}</a></li>
+                                    {%- endfor -%}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {%- endfor -%}
+                    <li class="masthead__menu-item">
+                        <a href="/FPSuperior/">FP SUPERIOR</a>
+                    </li>
+                    <li class="masthead__menu-item">
+                        <a href="/FPMedio/">FP MEDIO</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    /* Only display the Aula Virtual icon on mobile */
+    .aula-virtual-mobile {
+        display: none !important;
+        text-decoration: none;
+        color: #ffffff; /* Adjust icon color */
+        font-size: 20px; /* Adjust icon size */
+        margin-left: auto !important;
+    }
+
+    @media screen and (max-width: 768px) {
+        .aula-virtual-mobile {
+            display: inline !important;
+        }
+    }
+
+  /* Services */
+  .servicios-menu {
+    position: relative;
+    display: inline-block;
+  }
+  .servicios-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0; /* Alinea el menú desplegable a la derecha */
+    border-radius: 20px;
+    padding: 1em;
+    margin-top: 1em;
+  }
+  .servicios-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+  }
+  .servicios-dropdown a:hover {
+    background-color: #f1f1f1;
+  }
+  .servicios-button-content {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para colocar "Plan actual" debajo de "Mi Cuenta" */
+    align-items: center;
+  }
+  .servicios-subtitle {
+    font-size: 0.8em; /* Ajusta el tamaño de la fuente del subtítulo según tus necesidades */
+    color: #393e46; /* Ajusta el color del subtítulo */
+  }
+  .servicios-button-image-wrapper {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+  }
+  .servicios-button-image {
+    width: 100%;
+    height: auto;
+    margin-top: 0em;
+  }
+  .servicios-button-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+  }
+  .servicios-menu-image-wrapper {
+    position: relative;
+    text-align: center;
+  }
+  .servicios-menu-image {
+    width: 140px;
+    height: 140px;
+    margin: 1em 2em 0em;
+    float: none;
+  }
+  .servicios-menu-letter {
+    margin-top: 0.15em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+  }
+
+  /* Styles for the small navbar */
+  .small-navbar {
+      background-color: #ffffff;
+      padding: 3px 0; /* Reduced height */
+      width: 100%; /* Ensure it takes the full width */
+  }
+  
+  .small-navbar-inner {
+      display: flex;
+      justify-content: space-between; /* Separate left and right containers */
+      max-width: 1380px; /* Constrain max width */
+      margin: 0 auto 2px; /* Center the navbar horizontally */
+      padding: 0 .6em;
+  }
+  
+  .small-navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .small-navbar-left,
+  .small-navbar-right {
+      display: flex;
+      align-items: center;
+  }
+  
+  .small-navbar ul li {
+      display: inline;
+      margin: 0 10px; /* Adjust margin if needed */
+  }
+  
+  .small-navbar ul li a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 14px; /* Adjust font size if needed */
+      transition: color 0.3s; /* Smooth transition for color change */
+  }
+  
+  .small-navbar ul li a:hover {
+      color: #000000; /* Change color on hover */
+  }
+  
+  /* Main navbar adjustments */
+  #site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  #site-nav .visible-links {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  #site-nav .visible-links .masthead__menu-item a {
+      text-decoration: none;
+      color: #ffffff; /* Adjust link color */
+      font-size: 16px; /* Adjust font size */
+      transition: color 0.3s; /* Smooth transition for color change */
+      font-weight: bold;
+  }
+  
+  #site-nav .visible-links .masthead__menu-item a:hover {
+      color: #ffffff; /* Change color on hover */
+  }
+  
+  /* Dropdown menu styles */
+  .masthead__menu-item.dropdown {
+      position: relative;
+  }
+  
+  .masthead__menu-item.dropdown .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+  }
+  
+  .masthead__menu-item.dropdown:hover .dropdown-menu {
+      display: block;
+  }
+  
+  .dropdown-menu li {
+      list-style: none;
+  }
+  
+  .dropdown-menu li a {
+      display: block;
+      padding: 8px 16px;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu li a:hover {
+      background-color: #f7f7f7;
+  }
+  
+  /* Hide navigation items and "Solicita Información" button on smaller screens */
+  @media screen and (max-width: 768px) {
+      #site-nav .visible-links {
+          display: none;
+      }
+      
+      #site-nav .btn--secondary {
+          display: none;
+      }
+      
+      .greedy-nav__toggle {
+          display: block;
+      }
+      
+      .hidden-links {
+          display: none;
+          list-style-type: none;
+          padding: 0;
+      }
+      
+      .hidden-links.show {
+          display: block;
+      }
+
+      /* Hide small navbar */
+      .small-navbar {
+          display: none;
+      }
+  }
+  
+  /* Hide toggle button when items are visible */
+  @media screen and (min-width: 769px) {
+      .greedy-nav__toggle {
+          display: none;
+      }
+  }
+</style>
+
+<script>
+    // Servicios
+    function toggleserviciosMenu() {
+        const serviciosMenu = document.getElementById('servicios-menu-dropdown');
+        if (serviciosMenu) {
+            const isDisplayed = serviciosMenu.style.display === 'block';
+            serviciosMenu.style.display = isDisplayed ? 'none' : 'block';
+        }
+    }
+
+    // Cerrar el menú al hacer clic fuera de él
+    window.addEventListener('click', function(event) {
+        const serviciosMenu = document.getElementById('servicios-menu-dropdown');
+        if (serviciosMenu && !document.getElementById('servicios-button').contains(event.target) && !serviciosMenu.contains(event.target)) {
+            serviciosMenu.style.display = 'none';
+        }
+    });
+
+    // JavaScript to toggle hidden links visibility
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.querySelector('.greedy-nav__toggle');
+        const hiddenLinks = document.querySelector('.hidden-links');
+        const serviciosButton = document.querySelector('.servicios-menu');
+        
+        toggleButton.addEventListener('click', function() {
+            hiddenLinks.classList.toggle('show');
+            serviciosButton.classList.toggle('show'); // Toggle Servicios button visibility
+        });
+
+        // Add event listeners for dropdown menus
+        const dropdownItems = document.querySelectorAll('.masthead__menu-item.dropdown');
+        
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                const dropdownMenu = item.querySelector('.dropdown-menu');
+                if (dropdownMenu) {
+                    dropdownMenu.classList.toggle('show');
+                }
+                event.stopPropagation();
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            dropdownItems.forEach(item => {
+                const dropdownMenu = item.querySelector('.dropdown-menu');
+                if (dropdownMenu) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+        });
+    });
+
+// JavaScript to handle masthead background color change on scroll
+document.addEventListener('scroll', function() {
+    const masthead = document.querySelector('.masthead');
+
+    if (window.scrollY > 0) {
+        masthead.classList.add('scrolled');
+    } else {
+        masthead.classList.remove('scrolled');
+    }
+});
+</script>

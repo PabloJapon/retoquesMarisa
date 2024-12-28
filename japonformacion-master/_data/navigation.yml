@@ -1,0 +1,7 @@
+main:
+  - title: "AULA MATINAL"
+    url: "/aula_matinal/"
+  - title: "AULA DE ESPERA"
+    url: "/aula_espera/"
+  - title: "JUDO"
+    url: "/judo/"
