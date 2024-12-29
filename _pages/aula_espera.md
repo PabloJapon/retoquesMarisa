@@ -452,7 +452,7 @@ layout: default
 }
 
 .submit-button {
-  background-color: #e31c24;
+  background-color: #a5262c;
   color: white;
   border: none;
   padding: 15px 100px;

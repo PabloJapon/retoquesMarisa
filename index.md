@@ -8,7 +8,6 @@ header:
   actions:
     - label: "Solicita información"
       url: "https://japonformacion.netlify.app/contacto/"
-#excerpt: "Clases presenciales y en horario de mañana"
 excerpt: "Aprende y siente el flamenco con clases auténticas y espectáculos inolvidables"
 ---
 
@@ -272,7 +271,7 @@ excerpt: "Aprende y siente el flamenco con clases auténticas y espectáculos in
 }
 
 .plan-button {
-  background-color: #e31c24;
+  background-color: #a5262c;
   color: white;
   border: none;
   padding: 15px 100px;
@@ -288,7 +287,7 @@ excerpt: "Aprende y siente el flamenco con clases auténticas y espectáculos in
 }
 
 .submit-button {
-  background-color: #e31c24;
+  background-color: #a5262c;
   color: white;
   border: none;
   padding: 15px 100px;

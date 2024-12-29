@@ -33,7 +33,7 @@ img {
 }
 
 .plan-button2 {
-  background-color: #e31c24; /* Cambio de color */
+  background-color: #a5262c; /* Cambio de color */
   color: white;
   border: none;
   padding: 10px 50px;
@@ -50,7 +50,7 @@ img {
 }
 
 .plan-button {
-  background-color: #e31c24; /* Cambio de color */
+  background-color: #a5262c; /* Cambio de color */
   color: white;
   border: none;
   padding: 15px 80px;
@@ -133,7 +133,7 @@ img {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #e31c24;
+  background-color: #a5262c;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -160,7 +160,7 @@ img {
 }
 
 .dropbtn {
-  background-color: #e31c24;
+  background-color: #a5262c;
   color: white;
   padding: 10px 30px 10px 50px; /* Increased padding to accommodate the image */
   margin-left: 0.2em;
