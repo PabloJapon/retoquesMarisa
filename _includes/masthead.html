@@ -12,12 +12,6 @@
             {% unless logo_path == empty %}
               <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
             {% endunless %}
-            <a class="site-title" href="{{ '/' | relative_url }}">
-              {{ site.masthead_title | default: site.title }}
-              {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
-            </a>
-            
-            <!-- Visible Links (for larger screens) -->
             <ul class="visible-links">
               {%- for link in site.data.navigation.main -%}
                 <li class="masthead__menu-item">
@@ -28,75 +22,62 @@
                   >{{ link.title }}</a>
                 </li>
               {%- endfor -%}
-
-              <!-- Add the special links (FP SUPERIOR and FP MEDIO) here for larger screens -->
-              <li class="masthead__menu-item">
-                <a href="/FPSuperior/">FP SUPERIOR</a>
-              </li>
-              <li class="masthead__menu-item">
-                <a href="/FPMedio/">FP MEDIO</a>
-              </li>
             </ul>
 
-            <!-- Botón Servicios -->
-            <div class="servicios-menu">
-                <button class="btn btn--secondary" id="servicios-button" onclick="toggleserviciosMenu()" style="color: rgb(255, 255, 255);background-color: transparent;outline: none;">
-                    <div class="servicios-button-content" style="display: flex;align-items: center;flex-direction: row;">
-                        <div style="display: flex;flex-direction: column;align-items: flex-start;">
-                            <span id="servicios-username-button" style="font-size: 16px;font-weight: bold;">CICLOS FP</span>
+                <!-- Botón Servicios -->
+                <div class="servicios-menu">
+                    <button class="btn btn--secondary" id="servicios-button" onclick="toggleserviciosMenu()" style="color: rgb(255, 255, 255);background-color: transparent;outline: none;">
+                        <div class="servicios-button-content" style="display: flex;align-items: center;flex-direction: row;">
+                            <div style="display: flex;flex-direction: column;align-items: flex-start;">
+                                <span id="servicios-username-button" style="font-size: 16px;font-weight: bold;">CICLOS FP</span>
+                            </div>
                         </div>
+                    </button>
+                    <div id="servicios-menu-dropdown" class="servicios-dropdown" style="display: none; width: 12em;">
+                        <a href="/FPSuperior/">FP SUPERIOR</a>
+                        <a href="/FPMedio/">FP MEDIO</a>
                     </div>
-                </button>
-                <div id="servicios-menu-dropdown" class="servicios-dropdown" style="display: none; width: 12em;">
-                    <a href="/FPSuperior/">FP SUPERIOR</a>
-                    <a href="/FPMedio/">FP MEDIO</a>
                 </div>
-            </div>
     
-            <!-- Botón Solicita Información -->
-            <button class="btn btn--secondary" onclick="window.location.href='/contacto/'" style="margin-left: 1em;background-color: #212121;">Solicita Información</button>
-            
-            {% if site.search == true %}
-            <button class="btn btn--primary search__toggle" type="button" style="background-color: transparent;">
-                <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-                <i class="fas fa-search"></i>
-            </button>
-            {% endif %}
-            <a href="https://grupojapon.moodlecloud.com/login/index.php" class="aula-virtual-mobile"><i class="fas fa-user" aria-hidden="true" style="color: white;"></i></a>
-            <a href="https://app.grupojapon.es/" class="aula-virtual-mobile" style="margin-left: 0.5em !important;"><i class="fas fa-users" aria-hidden="true" style="color: white;"></i></a>
-            <button class="btn btn--primary greedy-nav__toggle hidden" type="button">
-                <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
-                <div class="navicon"></div>
-            </button>
-            
-            <!-- Hidden Links (for smaller screens) -->
-            <ul class="hidden-links hidden">
-                {%- for link in site.data.navigation.main -%}
-                    <li class="masthead__menu-item {% if link.submenu %}dropdown{% endif %}">
-                        <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-                        {% if link.submenu %}
-                            <ul class="dropdown-menu">
-                                {%- for sublink in link.submenu -%}
-                                    <li><a href="{{ sublink.url | relative_url }}">{{ sublink.title }}</a></li>
-                                {%- endfor -%}
-                            </ul>
-                        {% endif %}
+                <!-- Botón Solicita Información -->
+                <button class="btn btn--secondary" onclick="window.location.href='/contacto/'" style="margin-left: 1em;background-color: #212121;">Solicita Información</button>
+                
+                {% if site.search == true %}
+                <button class="btn btn--primary search__toggle" type="button" style="background-color: transparent;">
+                    <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+                    <i class="fas fa-search"></i>
+                </button>
+                {% endif %}
+                <a href="https://grupojapon.moodlecloud.com/login/index.php" class="aula-virtual-mobile"><i class="fas fa-user" aria-hidden="true" style="color: white;"></i></a>
+                <a href="https://app.grupojapon.es/" class="aula-virtual-mobile" style="margin-left: 0.5em !important;"><i class="fas fa-users" aria-hidden="true" style="color: white;"></i></a>
+                <button class="btn btn--primary greedy-nav__toggle hidden" type="button">
+                    <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+                    <div class="navicon"></div>
+                </button>
+                <ul class="hidden-links hidden">
+                    {%- for link in site.data.navigation.main -%}
+                        <li class="masthead__menu-item {% if link.submenu %}dropdown{% endif %}">
+                            <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                            {% if link.submenu %}
+                                <ul class="dropdown-menu">
+                                    {%- for sublink in link.submenu -%}
+                                        <li><a href="{{ sublink.url | relative_url }}">{{ sublink.title }}</a></li>
+                                    {%- endfor -%}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {%- endfor -%}
+                    <li class="masthead__menu-item">
+                        <a href="/FPSuperior/">FP SUPERIOR</a>
                     </li>
-                {%- endfor -%}
-
-                <!-- Add the special links (FP SUPERIOR and FP MEDIO) here for smaller screens -->
-                <li class="masthead__menu-item">
-                    <a href="/FPSuperior/">FP SUPERIOR</a>
-                </li>
-                <li class="masthead__menu-item">
-                    <a href="/FPMedio/">FP MEDIO</a>
-                </li>
-            </ul>
-          </nav>
+                    <li class="masthead__menu-item">
+                        <a href="/FPMedio/">FP MEDIO</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>
-
 
 <style>
 
