@@ -49,9 +49,8 @@
 }
 
 .site-logo img {
-  max-height: 2.7rem;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  max-height: 2.3rem;
+  margin-right: 10px;
 }
 
 .site-title {
@@ -62,6 +61,10 @@
   align-self: center;
   font-weight: bold;
   background-color: transparent !important; /* Ensure site title background is transparent */
+  color: #ffffff !important;
+  font-family: Hurricane;
+  font-size: 40px;
+  font-weight: 100;
 }
 
 .masthead__menu {
