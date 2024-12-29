@@ -1,7 +1,7 @@
 main:
-  - title: "AULA MATINAL"
+  - title: "Escuela de baile"
     url: "/aula_matinal/"
-  - title: "AULA DE ESPERA"
+  - title: "Compañía"
     url: "/aula_espera/"
-  - title: "JUDO"
+  - title: "Clases online"
     url: "/judo/"

@@ -199,7 +199,6 @@ body {
     animation: $intro-transition;
     -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
-    margin-top: 2em;
 
     @media (max-width: 768px) {
       margin-top: 0; /* Set margin-top to 0 for smaller screens */
