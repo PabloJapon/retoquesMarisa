@@ -45,27 +45,14 @@ layout: default
   }
 
   .bottom-left {
-    z-index: 10;
     max-width: 650px;
-    text-align: left;
-    margin-left: auto;
-    margin-right: 1em;
     color: white;
-    padding: 20px;
-    align-self: start;
   }
 
   .top-left {
-    grid-row: 1 / 2; /* First row */
-    grid-column: 1 / 2; /* Now in the first column */
     font-size: 42px;
     font-weight: 700;
     color: white;
-    z-index: 10; /* Ensure above background image */
-    text-align: left;
-    margin-right: 8.8em;
-    margin-left: auto;
-    padding-left: 20px;
   }
 
   /* Breakpoint for smaller screens: 1 column, 3 rows */
