@@ -10,19 +10,12 @@ layout: default
   <!-- Full-width background image -->
   <img src="/assets/images/aulamatinal.png" alt="Full Width Image" class="splash-image">
 
-  <!-- Grey transparent background image -->
-  <div class="grey-background"></div>
-
   <!-- Text title at top right -->
   <div class="top-left">Aula matinal</div>
 
-  <!-- Right image upfront -->
-  <img src="/assets/images/niñacomiendo.png" alt="Right Image" class="right-image">
-
   <!-- Text content at bottom left -->
   <div class="bottom-left">
-    <p>JAPONEDUCA, parte del GRUPO JAPÓN, ofrece servicios educativos, ocio y tiempo libre. Nuestro programa incluye aula matinal adaptada a horarios familiares, fortaleciendo la autonomía escolar bajo el Plan de Apertura de Centros en Andalucía.</p>
-    <button class="plan-button2" onclick="location.href='https://app.grupojapon.es/index.php/registro'" style="font-weight: 700;">INSCRÍBETE</button>
+    <p>En Retoques de Marisa ofrecemos un servicio especializado en reparación, cambio y ajuste de cremalleras para todo tipo de prendas y artículos. Ya sea una chaqueta, un pantalón, una falda, o incluso bolsos y mochilas, nos aseguramos de que cada cremallera funcione perfectamente y con un acabado impecable.</p>
   </div>
 </div>
 
@@ -53,18 +46,6 @@ layout: default
     z-index: 10; /* Ensure above background image */
     margin: 0 auto;
     transform: translateX(calc(-50% + 80px));
-  }
-
-  .grey-background {
-    background-color: rgba(127, 127, 127, 0.7); /* Semi-transparent grey */
-    position: absolute; /* Ensures it stays within the container */
-    top: 0;
-    left: 0;
-    width: 55%; /* Occupy the left half of the splash container */
-    height: 100%; /* Full height of the splash container */
-    z-index: 5; /* Below the text but above the background image */
-    margin-top: 3.5em;
-    transform: translateX(-80px);
   }
 
   .bottom-left {
@@ -164,6 +145,8 @@ layout: default
     gap: 20px;
     padding: 20px;
     margin-top: 2em;
+    max-width: 1380px;
+    margin: 0 auto;
   }
 
   .product {
