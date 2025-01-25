@@ -157,34 +157,77 @@ layout: default
     font-size: 17px;
     margin-bottom: 3em;
   }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 2em;
+  }
+
+  .product {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .product h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .product p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+
 </style>
 
-<div class="plans-container">
-  <a href="/aula_matinal" class="plan">
-    <h2>Aula Matinal</h2>
-    <p>JAPONEDUCA ofrece aula matinal en colegios, brindando a los alumnos un espacio seguro y enriquecedor para comenzar el día, facilitando además la organización de las familias.</p>
-  </a>
 
-  <a href="/aula_espera" class="plan">
-    <h2>Aula de Espera</h2>
-    <p>JAPONEDUCA ofrece un servicio de aulas de espera en colegios, proporcionando un espacio seguro y supervisado para los alumnos, adaptándose a las necesidades familiares y escolares.</p>
-  </a>
 
-  <a href="/judo" class="plan">
-    <h2>Judo</h2>
-    <p>Desde 1994, JAPONSPORT promueve el judo en Huelva para fomentar hábitos saludables y mejorar la calidad de vida.</p>
-  </a>
 
-  <a href="/FPSuperior" class="plan">
-    <h2>Grados Superiores</h2>
-    <p>Accede con el título de Bachillerato, una FP de Grado Medio o Superior o mediante prueba de acceso.</p>
-  </a>
-
-  <a href="/FPMedio" class="plan">
-    <h2>Grados Medios</h2>
-    <p>Accede con el título de ESO, Bachillerato o mediante una prueba de acceso.</p>
-  </a>
+<div class="product-grid">
+  <div class="product">
+    <img src="/assets/images/cremallera1.png" alt="Product 1">
+    <h3>Producto 1</h3>
+    <p>Breve descripción del producto 1.</p>
+  </div>
+  <div class="product">
+    <img src="/assets/images/cremallera2.png" alt="Product 2">
+    <h3>Producto 2</h3>
+    <p>Breve descripción del producto 2.</p>
+  </div>
+  <div class="product">
+    <img src="/assets/images/cremallera3.png" alt="Product 3">
+    <h3>Producto 3</h3>
+    <p>Breve descripción del producto 3.</p>
+  </div>
+  <div class="product">
+    <img src="/assets/images/cremallera4.png" alt="Product 4">
+    <h3>Producto 4</h3>
+    <p>Breve descripción del producto 4.</p>
+  </div>
 </div>
+
 
 
 
