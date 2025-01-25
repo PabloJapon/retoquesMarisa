@@ -11,7 +11,7 @@ layout: default
   <img src="/assets/images/aulamatinal.png" alt="Full Width Image" class="splash-image">
 
   <!-- Text title at top right -->
-  <div class="top-left">Aula matinal</div>
+  <div class="top-left">Cremalleras</div>
 
   <!-- Text content at bottom left -->
   <div class="bottom-left">
@@ -31,11 +31,7 @@ layout: default
     padding-top: 3.5em;
     margin-top: 2em;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
-    grid-template-rows: 142px 1fr; /* Default: 2 rows */
-    grid-column-gap: 20px; /* Adjust spacing between columns */
-    grid-row-gap: 20px; /* Adjust spacing between rows */
-    align-items: end;
+    justify-content: space-evenly;
   }
 
   /* Styling for the right image */
