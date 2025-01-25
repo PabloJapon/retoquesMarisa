@@ -174,6 +174,10 @@ layout: default
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures consistent positioning */
+    height: 100%; /* Makes all cards the same height */
   }
 
   .product:hover {
@@ -185,21 +189,21 @@ layout: default
     max-width: 100%;
     height: auto;
     border-radius: 12px;
-    margin-bottom: 10px;
+    margin: 0 auto; /* Ensures the image is horizontally centered */
   }
 
   .product h3 {
     font-size: 20px;
     color: #333;
-    margin-bottom: 10px;
+    margin: 10px 0 5px; /* Adds spacing above and below */
   }
 
   .product p {
     font-size: 16px;
     color: #666;
     line-height: 1.5;
+    margin: 0; /* Ensures it stays close to the title */
   }
-
 </style>
 
 
@@ -225,6 +229,31 @@ layout: default
     <img src="/assets/images/cremallera4.png" alt="Product 4">
     <h3>Producto 4</h3>
     <p>Breve descripción del producto 4.</p>
+  </div>
+  <div class="product">
+    <img src="/assets/images/cremallera5.png" alt="Product 5">
+    <h3>Producto 5</h3>
+    <p>Breve descripción del producto 5.</p>
+  </div>
+  <div class="product">
+    <img src="/assets/images/cremallera6.png" alt="Product 6">
+    <h3>Producto 6</h3>
+    <p>Breve descripción del producto 6.</p>
+  </div>
+  <div class="product">
+    <img src="/assets/images/cremallera7.png" alt="Product 7">
+    <h3>Producto 7</h3>
+    <p>Breve descripción del producto 7.</p>
+  </div>
+  <div class="product">
+    <img src="/assets/images/cremallera8.png" alt="Product 8">
+    <h3>Producto 8</h3>
+    <p>Breve descripción del producto 8.</p>
+  </div>
+  <div class="product">
+    <img src="/assets/images/cremallera9.png" alt="Product 9">
+    <h3>Producto 9</h3>
+    <p>Breve descripción del producto 9.</p>
   </div>
 </div>
 
