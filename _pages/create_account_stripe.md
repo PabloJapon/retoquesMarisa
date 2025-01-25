@@ -45,7 +45,7 @@ permalink: /create_account_stripe/
     }
 
     button {
-      background-color: #a5262c;
+      background-color: rgb(69 28 72);
       color: #fff;
       border: none;
       border-radius: 5px;

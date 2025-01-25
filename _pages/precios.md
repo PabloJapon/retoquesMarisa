@@ -34,7 +34,7 @@ img {
 }
 
 .plan-button2 {
-  background-color: #a5262c; /* Cambio de color */
+  background-color: rgb(69 28 72); /* Cambio de color */
   color: white;
   border: none;
   padding: 10px 50px;
@@ -51,7 +51,7 @@ img {
 }
 
 .plan-button {
-  background-color: #a5262c; /* Cambio de color */
+  background-color: rgb(69 28 72); /* Cambio de color */
   color: white;
   border: none;
   padding: 15px 100px;

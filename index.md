@@ -271,7 +271,7 @@ excerpt: "Aprende y siente el flamenco con clases auténticas y espectáculos in
 }
 
 .plan-button {
-  background-color: #a5262c;
+  background-color: rgb(69 28 72);
   color: white;
   border: none;
   padding: 15px 100px;
@@ -287,7 +287,7 @@ excerpt: "Aprende y siente el flamenco con clases auténticas y espectáculos in
 }
 
 .submit-button {
-  background-color: #a5262c;
+  background-color: rgb(69 28 72);
   color: white;
   border: none;
   padding: 15px 100px;
