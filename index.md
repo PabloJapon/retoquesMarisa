@@ -1,14 +1,14 @@
 ---
 #title: "Ciclos de FP oficiales en grupos reducidos y servicios educativos"
-title: "La esencia del flamenco en cada paso"
+title: "Confección y plancha a tu medida"
 layout: splash
 header:
-  overlay_image: /assets/images/page-header-teaser.png
+  overlay_image: /assets/images/header.jpg
   #overlay_filter: rgba(102,153,255,0.5)
   actions:
     - label: "Solicita información"
       url: "https://japonformacion.netlify.app/contacto/"
-excerpt: "Aprende y siente el flamenco con clases auténticas y espectáculos inolvidables"
+excerpt: "Soluciones rápidas y profesionales para particulares y empresas"
 ---
 
 
