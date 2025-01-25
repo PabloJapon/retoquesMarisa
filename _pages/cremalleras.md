@@ -1,6 +1,6 @@
 ---
-title: "Aula matinal"
-permalink: /aula_matinal/
+title: "Cremalleras"
+permalink: /cremalleras/
 layout: default
 ---
 
@@ -159,109 +159,36 @@ layout: default
   }
 </style>
 
+<div class="plans-container">
+  <a href="/aula_matinal" class="plan">
+    <h2>Aula Matinal</h2>
+    <p>JAPONEDUCA ofrece aula matinal en colegios, brindando a los alumnos un espacio seguro y enriquecedor para comenzar el día, facilitando además la organización de las familias.</p>
+  </a>
 
-<div style="font-size: 17px;text-align: center;">
-  <p>Fecha de inicio: 10 de septiembre de 2024</p>
-</div>
+  <a href="/aula_espera" class="plan">
+    <h2>Aula de Espera</h2>
+    <p>JAPONEDUCA ofrece un servicio de aulas de espera en colegios, proporcionando un espacio seguro y supervisado para los alumnos, adaptándose a las necesidades familiares y escolares.</p>
+  </a>
 
+  <a href="/judo" class="plan">
+    <h2>Judo</h2>
+    <p>Desde 1994, JAPONSPORT promueve el judo en Huelva para fomentar hábitos saludables y mejorar la calidad de vida.</p>
+  </a>
 
-<div class="table-container">
-  <table>
-    <thead>
-      <tr>
-        <th style="width: 200px;text-align: center;"><h2>Centro</h2></th>
-        <th style="width: 200px;text-align: center;"><h2>Horario</h2></th>
-        <th style="width: 200px;text-align: center;"><h2>Cuota</h2></th>
-        <th style="width: 200px;text-align: center;"><h2>Enlaces</h2></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="width: 200px;text-align: center;">Colegio San Vicente de Paul</td>
-        <td style="width: 200px;text-align: center;">De lunes a viernes de 7:30 a 9:00 h</td>
-        <td style="width: 200px;text-align: center;">
-          <ul style="list-style-type: disc; padding-left: 40px; margin: 0; text-align: left;">
-            <li>40 €/mes*</li>
-            <li>3 € - días sueltos (bono de 30 €)</li>
-          </ul>
-        </td>
-        <td style="width: 200px;text-align: center;">
-          <ul style="list-style-type: disc; padding-left: 40px; margin: 0; text-align: left;">
-            <li><a href="/assets/documents/Nota_informativa_Aula_Matinal_San_Vicente_de_Paul_2024-25.pdf">Más información</a></li>
-            <li><a href="https://app.grupojapon.es/index.php/registro">Inscríbete</a></li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <a href="/FPSuperior" class="plan">
+    <h2>Grados Superiores</h2>
+    <p>Accede con el título de Bachillerato, una FP de Grado Medio o Superior o mediante prueba de acceso.</p>
+  </a>
 
-<div style="font-size: 17px;text-align: center;font-style: italic;">
-  <p>*Bonificación del 20% para el tercer hermano/a inscrito/a</p>
+  <a href="/FPMedio" class="plan">
+    <h2>Grados Medios</h2>
+    <p>Accede con el título de ESO, Bachillerato o mediante una prueba de acceso.</p>
+  </a>
 </div>
 
 
 
-<div style="text-align:center; margin: 2em;">
-    Preguntas frecuentes
-  </div>
-  
-  <div class="faq-container">
-    <div id="faq" class="faq">
-      <button class="accordion">¿Cuándo se abre el periodo de inscripción?
-        <img src="/assets/images/angulo-hacia-abajo.png" width="20" height="20" class="accordion-icon">
-      </button>
-      <div class="panel">
-        <p>A partir del 1 de septiembre de 2024.</p>
-      </div>
-  
-      <button class="accordion">¿Cuándo empieza y termina el Aula Matinal?
-        <img src="/assets/images/angulo-hacia-abajo.png" width="20" height="20" class="accordion-icon">
-      </button>
-      <div class="panel">
-        <p>Comienza el servicio el día siguiente del comienzo del curso escolar y termina el 23 de junio de 2025 en horario de 7:30 a 9:00 horas.</p>
-      </div>
-  
-      <button class="accordion">¿Puedo elegir días sueltos?
-        <img src="/assets/images/angulo-hacia-abajo.png" width="20" height="20" class="accordion-icon">
-      </button>
-      <div class="panel">
-        <p>Sí. Se cobrarán por anticipado del 1 al 5, en bonos de 30 €, a través de Domiciliación
-            Bancaria. De no utilizarse la totalidad del bono a lo largo del curso, en junio se procederá a
-            la devolución por banco.</p>
-      </div>
-  
-      <button class="accordion">¿Hay descuentos en las cuotas?
-        <img src="/assets/images/angulo-hacia-abajo.png" width="20" height="20" class="accordion-icon">
-      </button>
-      <div class="panel">
-        <p>Sí. 20% de descuento a partir del 3º hermano/a.</p>
-      </div>
-  
-      <button class="accordion">¿Cuál es la forma de pago y cuándo pasan los recibos al cobro?
-        <img src="/assets/images/angulo-hacia-abajo.png" width="20" height="20" class="accordion-icon">
-      </button>
-      <div class="panel">
-        <p>Se realizará por anticipado del 1 al 5, trimestralmente, a través de Domiciliación Bancaria
-            (Septiembre, Octubre, Noviembre y Diciembre se cobrarán juntos en Noviembre). Los
-            siguientes trimestres se cobraran en febrero y en mayo.</p>
-      </div>
-  
-      <button class="accordion">¿Cómo me doy de baja?
-        <img src="/assets/images/angulo-hacia-abajo.png" width="20" height="20" class="accordion-icon">
-      </button>
-      <div class="panel">
-        <p>Enviado un email a través de nuestro correo: contacto@grupojapon.es</p>
-      </div>
-  
-      <button class="accordion">Si me doy de baja antes del término del trimestre abonado, ¿me devuelven los meses no asistido?
-        <img src="/assets/images/angulo-hacia-abajo.png" width="20" height="20" class="accordion-icon">
-      </button>
-      <div class="panel">
-        <p>PSí . Se realizara la devolución a través de transferencia de los meses no asistidos.</p>
-      </div>
-    </div>
-  </div>
+
 
 
 <div style="text-align:center; margin-top:7em">

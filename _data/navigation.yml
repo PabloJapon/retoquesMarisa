@@ -1,7 +1,7 @@
 main:
-  - title: "Escuela de baile"
-    url: "/aula_matinal/"
-  - title: "Compañía"
+  - title: "Cremalleras"
+    url: "/cremalleras/"
+  - title: "Botones"
     url: "/aula_espera/"
-  - title: "Clases online"
+  - title: "Ropa"
     url: "/judo/"

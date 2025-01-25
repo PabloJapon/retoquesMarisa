@@ -73,6 +73,7 @@ body {
   margin-top: 0;
   line-height: 1;
   //text-align: center;
+  text-shadow: 0 0 12px #000000aa;
 
   a {
     color: $text-color;
@@ -234,6 +235,7 @@ body {
     .page__lead {
       max-width: $medium;
       color: #ffffff;
+      text-shadow: 0 0 12px #000000aa;
     }
 
     .page__title {
