@@ -3,11 +3,11 @@
 title: "Confección y plancha a tu medida"
 layout: splash
 header:
-  overlay_image: /assets/images/header.jpg
+  overlay_image: /assets/images/header.png
   #overlay_filter: rgba(102,153,255,0.5)
   actions:
     - label: "Solicita información"
-      url: "https://japonformacion.netlify.app/contacto/"
+      url: "https://retoquesdemarisa.netlify.app/contacto/"
 excerpt: "Soluciones rápidas y profesionales para particulares y empresas"
 ---
 
